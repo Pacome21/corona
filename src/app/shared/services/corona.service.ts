@@ -27,11 +27,11 @@ export class CoronaService  {
 
   private sortCountryData(a: ICountryDataModel, b:ICountryDataModel) : number{
     var retVal : number = 0;
-    if(a.Country == b.Country){
+    if(a.Country.toLowerCase() == b.Country.toLowerCase()){
       retVal = 0;
     }
     else{
-      if(a.Country < b.Country){
+      if(a.Country.toLowerCase() < b.Country.toLowerCase()){
         retVal = -1;
       }
       else {
